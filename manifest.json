@@ -1,0 +1,9 @@
+{
+    "name": "Language_Loader",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/IngoHHacks/LanguageLoader",
+    "description": "A BepInEx plugin to load languages from csv files.",
+    "dependencies": [
+        "BepInEx-BepInExPack_Inscryption-5.4.1701"
+    ]
+}
