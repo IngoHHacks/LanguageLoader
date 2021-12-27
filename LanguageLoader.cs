@@ -16,7 +16,7 @@ namespace LanguageLoader
     {
         private const string PluginGuid = "IngoH.inscryption.LanguageLoader";
         private const string PluginName = "LanguageLoader";
-        private const string PluginVersion = "1.0.0";
+        private const string PluginVersion = "1.0.1";
 
         internal static ManualLogSource Log;
 
