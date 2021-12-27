@@ -21,3 +21,7 @@ Dialogue codes:
 - **[shake:(i)]** - Shakes the talking card with intensity *(i)*
 - **[anim:(a)]** - Plays animation *(a)*
 - **[p:(p)]** - Sets the voice pitch to *(p)*
+
+### Changelog ###
+#### 1.0.1
+- Fix README
