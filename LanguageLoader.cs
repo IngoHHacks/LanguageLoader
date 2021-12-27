@@ -183,9 +183,24 @@ namespace LanguageLoader
 				}
 				if ((int) CurrentLanguage >= (int) Language.NUM_LANGUAGES && newLangs[(int) CurrentLanguage - origLangCount].special.Contains("CustomTitle1")) {
 					SpriteRenderer[] srs = ___titleAnimation.gameObject.GetComponentsInChildren<SpriteRenderer>();
-					byte[] imgBytes = File.ReadAllBytes(Path.Combine(p.Info.Location.Replace("LanguageLoader.dll", ""), "Artwork/inscryption_title_hide.png"));
+
+					string[] imagePaths = Directory.GetFiles(Paths.PluginPath, "inscryption_title_hide.png", SearchOption.AllDirectories);
+
+					if (imagePaths.Length == 0)
+					{
+						Log.LogError("Can't find the 'HIDE' title (inscryption_title_hide.png)");
+					}
+
+					if (imagePaths.Length > 1)
+					{
+						Log.LogWarning("More than on 'HIDE' title found (inscryption_title_hide.png)");
+					}
+
+					byte[] imgBytes = File.ReadAllBytes(imagePaths[0]);
+
 					Texture2D rep = new Texture2D(2, 2);
 					rep.LoadImage(imgBytes);
+
 					int i = 0;
 					foreach (SpriteRenderer sr in srs)
 					{
