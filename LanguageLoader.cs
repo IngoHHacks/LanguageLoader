@@ -16,7 +16,7 @@ namespace LanguageLoader
     {
         private const string PluginGuid = "IngoH.inscryption.LanguageLoader";
         private const string PluginName = "LanguageLoader";
-        private const string PluginVersion = "1.0.1";
+        private const string PluginVersion = "1.0.2";
 
         internal static ManualLogSource Log;
 
@@ -181,7 +181,7 @@ namespace LanguageLoader
 					LoadLanguages();
 					langsLoaded = true;
 				}
-				if ((int) CurrentLanguage >= (int) Language.NUM_LANGUAGES && newLangs[(int) CurrentLanguage - origLangCount].special.Contains("CustomTitle1")) {
+				if ((int) CurrentLanguage >= (int) Language.NUM_LANGUAGES && newLangs[(int) CurrentLanguage - origLangCount].special != null && newLangs[(int) CurrentLanguage - origLangCount].special.Contains("CustomTitle1")) {
 					SpriteRenderer[] srs = ___titleAnimation.gameObject.GetComponentsInChildren<SpriteRenderer>();
 
 					string[] imagePaths = Directory.GetFiles(Paths.PluginPath, "inscryption_title_hide.png", SearchOption.AllDirectories);

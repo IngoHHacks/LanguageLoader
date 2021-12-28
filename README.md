@@ -23,5 +23,8 @@ Dialogue codes:
 - **[p:(p)]** - Sets the voice pitch to *(p)*
 
 ### Changelog ###
+#### 1.0.2
+- Fix issue with ```special``` metadata being null
+
 #### 1.0.1
 - Fix README
