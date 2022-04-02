@@ -16,7 +16,7 @@ namespace LanguageLoader
     {
         private const string PluginGuid = "IngoH.inscryption.LanguageLoader";
         private const string PluginName = "LanguageLoader";
-        private const string PluginVersion = "1.0.2";
+        private const string PluginVersion = "2.0.0";
 
         internal static ManualLogSource Log;
 
@@ -231,7 +231,7 @@ namespace LanguageLoader
 			foreach (string file in files)
 			{
 				string filename = file.Substring(file.LastIndexOf(Path.DirectorySeparatorChar) + 1);
-				string name = filename.Substring(0, filename.Length - 4);
+				string name = filename.Substring(0, filename.Length - 6);
 				string all = File.ReadAllText(file);
 				string meta = "";
 				string translations;

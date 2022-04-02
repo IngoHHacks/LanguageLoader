@@ -3,6 +3,7 @@ A BepInEx plugin to load languages from csv files.
 Loads languages from .ilang files (formatted in csv) inside the plugins folder.  
 The start of .ilang files may contain metadata in ```key: value``` format, terminated by ```#ENDMETA#```.  
 An example translation file is provided in the **Example** folder.  
+Languages can be selected from the in-game settings.
 
 Supported meta fields:  
 - **id** - The namespaced id of the translation.  
@@ -23,6 +24,11 @@ Dialogue codes:
 - **[p:(p)]** - Sets the voice pitch to *(p)*
 
 ### Changelog ###
+
+#### 2.0.0
+- Update template
+- Fixed names for languages without meta
+
 #### 1.0.2
 - Fix issue with ```special``` metadata being null
 
